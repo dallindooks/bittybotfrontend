@@ -1,0 +1,42 @@
+:root {
+    --primary: #003647;
+    --secondary: #6cb6b3;
+    --accent: #f2552c;
+    --accent-2: #e79631;
+    --main-font: 'Arial';
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary);
+    font-family: var(--main-font);
+    height: 100vh;
+}
+
+h1 {
+    color: var(--primary)
+}
+
+p {
+    color: var(--secondary);
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 60%;
+    background-image: url('assets/bitcoin-image.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.footer {
+    position: absolute;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+}
