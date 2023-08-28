@@ -18,9 +18,9 @@ auth.onAuthStateChanged(function (user) {
 const chart = window.Chart
 
 let start = "08-25-2023"
-const count_url = `http://127.0.0.1:8000/profitable-count/${start}`;
-const profit_url = `http://127.0.0.1:8000/profitabilities/${start}`;
-const profit_vs_certainty_url = `http://127.0.0.1:8000/profit-vs-certainty/${start}`
+const count_url = `https://bittybot-d77501a18969.herokuapp.com/profitable-count/${start}`;
+const profit_url = `https://bittybot-d77501a18969.herokuapp.com/profitabilities/${start}`;
+const profit_vs_certainty_url = `https://bittybot-d77501a18969.herokuapp.com/profit-vs-certainty/${start}`
 fetch(count_url)
   .then(function (response) {
     if (!response.ok) {
@@ -220,7 +220,7 @@ const createScatterPlot = (data) => {
 }
 
 const startbot = () => {
-  const url = "http://127.0.0.1:8000/startBot/"
+  const url = "https://bittybot-d77501a18969.herokuapp.com/startBot/"
   const payload = {
     "token": id_token
   }
@@ -243,7 +243,7 @@ const startbot = () => {
 
 
 const killbot = () => {
-  const url = "http://127.0.0.1:8000/killBot/"
+  const url = "https://bittybot-d77501a18969.herokuapp.com/killBot/"
   const payload = {
     "token": id_token
   }
@@ -268,7 +268,7 @@ document.getElementById("start-button").addEventListener("click", startbot)
 document.getElementById("kill-button").addEventListener("click", killbot)
 
 const getBotStatus = () => {
-  const url = "http://127.0.0.1:8000/bot-running"
+  const url = "https://bittybot-d77501a18969.herokuapp.com/bot-running"
   fetch(url, {
     method: "GET",
     headers: {
